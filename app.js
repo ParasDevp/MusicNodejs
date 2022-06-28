@@ -7,9 +7,9 @@ const http = require('http');
 const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
-const port = process.env.Port;
+const PORT = process.env.PORT||5000;
 
-app.listen(port);
+app.listen(PORT,console.log('server listening on port',PORT));
 
 app.use(morgan('dev'));
 app.use(function(req, res, next) {
