@@ -13,11 +13,6 @@ const ArtistSchema = new mongoose.Schema({
   Bio : {
     type: 'string',
   }, 
-  Songs :{
-    type: 'string',
-    required: true,
-  }
-
 })
 const Artist =  mongoose.model('Artist', ArtistSchema);
 module.exports = Artist;

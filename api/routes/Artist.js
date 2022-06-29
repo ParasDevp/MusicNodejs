@@ -10,8 +10,8 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const { ArtistName,dateOfbirth,Bio, Songs} = req.body;
-       const user = new Artist({ArtistName,dateOfbirth,Bio,Songs})
+        const { ArtistName,dateOfbirth,Bio} = req.body;
+       const user = new Artist({ArtistName,dateOfbirth,Bio})
        await user.save();
        res.status(200).json({message: 'data store in dataBase', user})
     }
